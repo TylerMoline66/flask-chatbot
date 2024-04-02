@@ -1,0 +1,1 @@
+from .static_routes import static_blueprint
