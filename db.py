@@ -14,11 +14,14 @@
     #     raise ValueError('cannot init db without db and app objects')
 
 
-from flask import Flask, render_template
-from flask_mysql import MySQL
 
-def init_db(app=None, db=None):
 
-  mysql = MySQL(app)
+
+# from flask import Flask, render_template
+# from flask_mysql import MySQL
+
+# def init_db(app=None, db=None):
+
+#   mysql = MySQL(app)
 
  

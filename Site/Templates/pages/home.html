@@ -9,8 +9,33 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    <h1>Hello there from Home</h1>
+    <h1>Transformers Chatbot</h1>
+    <div id="chat"></div>
+    <input type="text" id="user_input" />
+    <button onclick="sendMessage()">Send</button>
 
-    <script src="" async defer></script>
+    <script>
+      function sendMessage() {
+        var message = document.getElementById("user_input").value;
+        document.getElementById("user_input").value = "";
+        fetch("/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message: message }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            var chatDiv = document.getElementById("chat");
+            var userDiv = document.createElement("div");
+            userDiv.innerText = "You: " + message;
+            chatDiv.appendChild(userDiv);
+            var botDiv = document.createElement("div");
+            botDiv.innerText = "Bot: " + data.message;
+            chatDiv.appendChild(botDiv);
+          });
+      }
+    </script>
   </body>
 </html>

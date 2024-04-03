@@ -7,6 +7,12 @@ name = "pypi"
 flask = "*"
 flask-sqlalchemy = "*"
 flask-mysql = "*"
+transformers = "*"
+tensorflow = "*"
+tf-keras = "*"
+torch = "*"
+torchvision = "*"
+torchaudio = "*"
 
 [dev-packages]
 
