@@ -5,7 +5,7 @@ import Routes
 
 from db import *
 
-app = Flask(__name__, template_folder="site/templates", static_folder="site/static")
+app = Flask(__name__, template_folder="site/templates", static_folder="Site/Static")
 
 
 # app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://127.0.0.1:5432/homework"

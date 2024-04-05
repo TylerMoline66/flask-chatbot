@@ -6,36 +6,51 @@
     <title>Flask ChatBot</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='styles/home.css')}}"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="{{url_for('static', filename='scripts/chat.js')}}"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
-    <h1>Transformers Chatbot</h1>
-    <div id="chat"></div>
-    <input type="text" id="user_input" />
-    <button onclick="sendMessage()">Send</button>
+    <div class="chat-space">
+      <div class="hero">
+        <img
+          class="autobot"
+          src="../../Static/images/autobots.png"
+          alt="robot"
+        />
+        <h1>ChatTron</h1>
+        <img
+          class="decepticon"
+          src="../../Static/images/decepticons-.png"
+          alt="robot"
+        />
+      </div>
+      <p>
+        ChatTron is an AI-powered chat bot designed to engage in natural
+        conversations and provide helpful responses. With its advanced language
+        processing capabilities, ChatTron can assist you with a wide range of
+        queries, from answering questions to providing recommendations. Whether
+        you're looking for information, a friendly chat, or just curious about
+        AI technology, ChatTron is here to chat with you!
+      </p>
 
-    <script>
-      function sendMessage() {
-        var message = document.getElementById("user_input").value;
-        document.getElementById("user_input").value = "";
-        fetch("/chat", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ message: message }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            var chatDiv = document.getElementById("chat");
-            var userDiv = document.createElement("div");
-            userDiv.innerText = "You: " + message;
-            chatDiv.appendChild(userDiv);
-            var botDiv = document.createElement("div");
-            botDiv.innerText = "Bot: " + data.message;
-            chatDiv.appendChild(botDiv);
-          });
-      }
-    </script>
+      <div id="chat"></div>
+      <div class="chat">
+        <input type="text" id="user_input" />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
   </body>
 </html>
