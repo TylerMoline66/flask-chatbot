@@ -13,6 +13,8 @@ tf-keras = "*"
 torch = "*"
 torchvision = "*"
 torchaudio = "*"
+sqlalchemy = "*"
+marshmallow = "*"
 
 [dev-packages]
 

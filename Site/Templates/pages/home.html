@@ -25,29 +25,32 @@
   <body>
     <div class="chat-space">
       <div class="hero">
-        <img
-          class="autobot"
-          src="../../Static/images/autobots.png"
-          alt="robot"
-        />
-        <h1>ChatTron</h1>
-        <img
-          class="decepticon"
-          src="../../Static/images/decepticons-.png"
-          alt="robot"
-        />
+        <div class="name-and-images">
+          <img
+            class="autobot"
+            src="../../Static/images/autobots.png"
+            alt="robot"
+          />
+          <h1>ChatTron</h1>
+          <img
+            class="decepticon"
+            src="../../Static/images/decepticons-.png"
+            alt="robot"
+          />
+        </div>
+        <p>
+          ChatTron is an AI-powered chat bot designed to engage in natural
+          conversations and provide helpful responses. With its advanced
+          language processing capabilities, ChatTron can assist you with a wide
+          range of queries, from answering questions to providing
+          recommendations. Whether you're looking for information, a friendly
+          chat, or just curious about AI technology, ChatTron is here to chat
+          with you!
+        </p>
       </div>
-      <p>
-        ChatTron is an AI-powered chat bot designed to engage in natural
-        conversations and provide helpful responses. With its advanced language
-        processing capabilities, ChatTron can assist you with a wide range of
-        queries, from answering questions to providing recommendations. Whether
-        you're looking for information, a friendly chat, or just curious about
-        AI technology, ChatTron is here to chat with you!
-      </p>
 
-      <div id="chat"></div>
       <div class="chat">
+        <div id="chat"></div>
         <input type="text" id="user_input" />
         <button onclick="sendMessage()">Send</button>
       </div>
