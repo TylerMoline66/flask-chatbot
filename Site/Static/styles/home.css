@@ -1,55 +1,193 @@
+:root {
+  --primary-dark: #1b0f37;
+  --primary: #8f5fd6;
+  --primary-light: #412b59;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Archivo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  padding: 50px 100px;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--primary-dark);
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-.hero {
-  margin: auto;
+main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
-.hero .name-and-images {
+.info-section {
   display: flex;
-}
-
-.autobot,
-.decepticon {
-  width: 6%;
-}
-
-.chat-space p {
-  width: 50%;
-  line-height: 18px;
-}
-
-.chat-space {
-  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 900px;
+  padding: 4rem;
 }
 
-.chat-space .chat {
-  width: 60%;
-  padding: 50px 200px;
+.info-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.452);
+  font-weight: 300;
+  line-height: 2.5rem;
+}
+
+.chat-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 2rem;
+  padding: 4rem;
 }
 
-.chat input,
-.chat button {
-  width: 30%;
-  padding: 7px;
-  margin: 5px;
-  border: 1px solid black;
-  border-radius: 7px;
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 900px;
+  transition: all 0.2s ease-in-out;
+}
+
+.chat-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  width: 100%;
+  max-width: 900px;
+}
+
+.chat-inputs input {
+  width: 100%;
+  padding: 1rem;
+  height: 4rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.108);
+  border-radius: 0.7rem;
+  border: 1px solid transparent;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: background-color 0.2s ease-in-out;
+  outline: none;
+  color: white;
+}
+
+.chat-inputs input::placeholder {
+  color: rgba(255, 255, 255, 0.452);
+}
+
+.chat-inputs input:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.chat-inputs input:focus {
+  background-color: var(--primary-dark);
+  border: 1px solid rgba(255, 255, 255, 0.243);
+}
+
+.chat-inputs button {
+  margin-left: 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: pointer;
+  height: 4rem;
+  padding: 1rem 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.chat-inputs button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.chat-inputs button:active {
+  transform: scale(0.98);
+}
+
+.user-chat {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.user-chat p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 50%;
+
+  margin-top: 1rem;
+  min-height: 5rem;
+  border: 1px solid rgba(255, 255, 255, 0.152);
+  border-radius: 0.7rem;
+}
+
+.ai-chat {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.ai-chat p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 50%;
+  background: var(--primary);
+  margin-top: 1rem;
+  min-height: 5rem;
+  border: 1px solid var(--primary);
+  border-radius: 0.7rem;
+}
+
+.icon {
+  font-size: 3rem;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid var(--primary-light);
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-align: center;
 }
