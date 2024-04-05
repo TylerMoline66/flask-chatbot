@@ -12,7 +12,7 @@
    Install project dependencies using Pipenv:
 
    ```bash
-   pipenv install Flask Flask-MySQLdb
+   pipenv install
    ```
 
 3. **Configure MySQL**:
